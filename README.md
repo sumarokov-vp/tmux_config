@@ -21,61 +21,36 @@ man tmux
 >[!info]
 Use sessionist plugin [[tmux PurpleSchool configuration]]
 
-| Command|Keys|Plugin|
-|-----------|-----|--|
-|New session|^+B -> Shift+C |Sessionist
-| Choose session                        | ^+B -> s            |
-| Detach session             | ^+B -> d            |
-| Rename session                 | ^+B -> $            |
-|Next session|^+B -> )|Sessionist
+| Command           |Keys                   |Plugin
+|-------------------|-------------------    |--------
+| New session       | PREFIX -> Shift+C     |Sessionist
+| Choose session    | PREFIX -> s           |
+| Detach session    | PREFIX -> d           |
+| Rename session    | PREFIX -> $           |
+| Next session      | PREFIX -> )           |Sessionist
+| Kill session      | PREFIX -> X           |Sessionist
 
-### Rename window
+###  Windows
+| Comand                               | Keys
+| ------------------------------------ | -----------
+| Создать окно                         | PREFIX -> c
+| Сменить окно                         | PREFIX -> 0
+| Режим прокрутки scroll               | PREFIX -> \[ (q - exit)
+| Переимновать окно                    | PREFIX -> ,
+| Kill window                          | Ctrl + d
 
-```bash
-vim ~/.tmux.conf
-
-Создать строку в файле: set-option -g allow-rename off
-
-Обновить настройки:
-tmux source-file ~/.tmux.conf
-
-Ctrl<B> ,
-```
-
-
-
-| Comand                               | Keys              |
-| ------------------------------------ | ----------------- |
-| Создать окно                         | ^+B, c            |
-| Сменить окно                         | ^+B, 0; ^+B, 1    |
-| Режим прокрутки scroll               | ^+B, \[ (q - exit)|
-| Разбить панель вертикально           | ^+B, %            |
-| Переход между вертикальными панелями | ^+B, ←            |
-| Разбить панель горизонтально         | ^+B, "            |
-| Отключиться от сессии                | ^+B, d            |
-| Выбор сессии                         | ^+B, s            |
-| Переименовать сессию                 | ^+B, $            |
-| Переимновать окно                    | ^+B, ,            |
-| Закрыть панель                       | exit              |
+### Panes
+| Comand                               | Keys 
+| ------------------------------------ | -----------------
+| Разбить панель горизонтально         | PREFIX -> " 
+| Разбить панель вертикально           | PREFIX -> % 
+| Изменить размеры панели              | PREFIX -> hjkl (нажимать быстро для повтора) 
+| Закрыть панель                       | PREFIX -> x
 
 ### Конфигурация
+[[tmux PurpleSchool configuration]]
 
 ```bash
 vim ~/.tmux.conf
 ```
-
-| Comand                   | Description                               |
-| ------------------------ | ----------------------------------------- |
-| set-option -g prefix C-q | Сменить основной хоткей на ^+Q вместо ^+B |
-| set -g mouse on          | Можно мышкой менять размер экрана         |
-|                          |                                           |
-|                          |                                           |
-|                          |                                           |
-|                          |                                           |
-|                          |                                           |
-
-```
-
-```
-
 
